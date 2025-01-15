@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ContatoComponent } from '../contato/contato.component';
 
 @Component({
   selector: 'app-rodape',
