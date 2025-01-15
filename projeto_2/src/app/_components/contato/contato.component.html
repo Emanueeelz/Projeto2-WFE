@@ -1,1 +1,25 @@
-<p>contato works!</p>
+<!-- contato.component.html -->
+<a href="#" data-bs-toggle="modal" [attr.data-bs-target]="'#contatoModal' + nome">
+    {{ nome }}
+  </a>
+  
+  <div class="modal fade" [id]="'contatoModal' + nome" tabindex="-1" 
+       [attr.aria-labelledby]="'exampleModalLabel' + nome" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" [id]="'exampleModalLabel' + nome">{{ nome }}</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img [src]="foto" class="img-thumbnail" alt="Foto do contato"> <br />
+          Email: {{ email }} <br />
+          Github: {{ github }} <br />
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

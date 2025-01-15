@@ -1,1 +1,36 @@
-<p>rodape works!</p>
+<!-- rodape.component.html -->
+<footer class="container text-center bg-dark text-light" data-bs-theme="dark">
+    <div class="text-center p-3 border-top border-body">
+      © 2024 IFRN:
+      <label class="text-body">Desenvolvido por 
+        <app-contato 
+          [nome]="'Emanuel'" 
+          [email]="'e.correia@escolar.ifrn.edu.br'"
+          [foto]="'https://avatars.githubusercontent.com/u/165174639?v=4&size=256'" 
+          [github]="'Emanueeelz'">
+        </app-contato>
+        e 
+        <app-contato 
+          [nome]="'Pedro'" 
+          [email]="'naosei@email.com'"
+          [foto]="'https://avatars.githubusercontent.com/u/165175268?v=4'" 
+          [github]="'pedrop1009'">
+        </app-contato>
+        e 
+        <app-contato 
+          [nome]="'Marcelo'" 
+          [email]="'henrique.cordeiro@escolar.ifrn.edu.br'"
+          [foto]="'https://avatars.githubusercontent.com/u/165174662?v=4&size=256'" 
+          [github]="'SoulsXD'">
+        </app-contato>
+        e 
+        <app-contato 
+          [nome]="'Raynara'" 
+          [email]="'seila@email.com'"
+          [foto]="'https://avatars.githubusercontent.com/u/165175314?v=4'" 
+          [github]="'blueray00'">
+        </app-contato>.
+      </label>
+    </div>
+  </footer>
+  

@@ -1,0 +1,17 @@
+/* rodape.component.css */
+footer {
+    background-color: #343a40;  /* Cor de fundo do rodapé */
+    color: #fff;  /* Cor do texto */
+    padding: 20px 0;  /* Espaçamento em cima e embaixo */
+  }
+  
+  footer .text-body {
+    font-size: 14px;  /* Ajusta o tamanho da fonte */
+  }
+  
+  footer .container {
+    max-width: 1200px;  /* Largura máxima */
+    margin: 0 auto;  /* Centraliza o conteúdo */
+    padding: 0 15px;  /* Adiciona algum espaçamento nas laterais */
+  }
+  
