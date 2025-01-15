@@ -10,7 +10,8 @@ import { FormularioComponent } from './_components/formulario/formulario.compone
   standalone: true,
   imports: [RouterOutlet, CabecalhoComponent, RodapeComponent, ContatoComponent, FormularioComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
+            
 })
 export class AppComponent {
   title = 'projeto_2';
