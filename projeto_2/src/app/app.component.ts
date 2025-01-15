@@ -8,7 +8,7 @@ import { FormularioComponent } from './_components/formulario/formulario.compone
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CabecalhoComponent, RodapeComponent, ContatoComponent, FormularioComponent],
+  imports: [RouterOutlet, CabecalhoComponent, RodapeComponent, FormularioComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
             
