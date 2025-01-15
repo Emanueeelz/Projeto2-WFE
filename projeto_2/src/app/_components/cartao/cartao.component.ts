@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-cartao',
-  standalone: true, // Torna o componente independente
+  standalone: true,
   templateUrl: './cartao.component.html',
-  styleUrls: ['./cartao.component.css'], // Inclua o CSS se necessário
+  styleUrls: ['./cartao.component.css'],
 })
 export class CartaoComponent {}
