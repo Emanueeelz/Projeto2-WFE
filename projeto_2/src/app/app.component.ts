@@ -4,11 +4,12 @@ import { CabecalhoComponent } from './_components/cabecalho/cabecalho.component'
 import { RodapeComponent } from './_components/rodape/rodape.component';
 import { FormularioComponent } from './_components/formulario/formulario.component';
 import { CartaoComponent } from './_components/cartao/cartao.component';
+import { CorpoSiteComponent } from "./_components/corpo-site/corpo-site.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CabecalhoComponent, RodapeComponent, CartaoComponent],
+  imports: [CabecalhoComponent, RodapeComponent, CartaoComponent, CorpoSiteComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
