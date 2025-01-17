@@ -1,0 +1,13 @@
+.custom-card {
+  max-width: 45rem;
+
+}
+
+.custom-card img {
+
+  object-fit: cover;
+}
+
+.custom-card .card-body {
+  padding: 0.5rem;
+}
