@@ -9,11 +9,6 @@
   margin: 0;
 }
 
-
-.navbar {
-  background-color: #6c63ff;
-}
-
 .navbar .navbar-nav {
   display: flex;
   justify-content: center;
