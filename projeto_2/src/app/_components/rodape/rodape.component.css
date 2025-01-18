@@ -3,14 +3,21 @@ footer {
     color: #fff;
     padding: 20px 0;
   }
-  
+
   footer .text-body {
     font-size: 14px;
   }
-  
+
   footer .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
   }
-  
+
+  .app-contato {
+    text-decoration: none !important; /* Remove qualquer sublinhado */
+    color: inherit !important;        /* Herda a cor do texto sem mudar */
+    cursor: default !important;       /* Remove o cursor de link (mãozinha) */
+    display: inline-block;            /* Garante que o comportamento seja como um bloco normal */
+  }
+

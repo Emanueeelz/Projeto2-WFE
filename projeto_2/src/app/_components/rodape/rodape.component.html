@@ -1,35 +1,49 @@
-<footer class="container text-center bg-dark text-light" data-bs-theme="dark">
-    <div class="text-center p-3 border-top border-body">
-      © 2024 IFRN:
-      <label class="text-body">Desenvolvido por
-        <app-contato
-          [nome]="'Emanuel'"
-          [email]="'e.correia@escolar.ifrn.edu.br'"
-          [foto]="'https://avatars.githubusercontent.com/u/165174639?v=4&size=256'"
-          [github]="'Emanueeelz'">
-        </app-contato>
+<footer class="container-fluid text-center bg-dark text-light" data-bs-theme="dark">
+  <div class="text-center p-3 border-top border-body">
+    <label class="text-body">
+      <div class="mt-4 text-body">Desenvolvido por:</div>
+      <div class="d-flex justify-content-between">
+        <div class="mb-4 mx-3 d-flex flex-column align-items-center">
+          <i class="bi bi-github" style="font-size: 2rem;"></i>
+          <app-contato
+            [nome]="'Emanuel'"
+            [email]="'e.correia@escolar.ifrn.edu.br'"
+            [foto]="'https://avatars.githubusercontent.com/u/165174639?v=4&size=256'"
+            [github]="'Emanueeelz'">
+          </app-contato>
+        </div>
 
-        e
-        <app-contato
-          [nome]="'Pedro'"
-          [email]="'naosei@email.com'"
-          [foto]="'https://avatars.githubusercontent.com/u/165175268?v=4'"
-          [github]="'pedrop1009'">
-        </app-contato>
-        e
-        <app-contato
-          [nome]="'Marcelo'"
-          [email]="'henrique.cordeiro@escolar.ifrn.edu.br'"
-          [foto]="'https://avatars.githubusercontent.com/u/165174662?v=4&size=256'"
-          [github]="'SoulsXD'">
-        </app-contato>
-        e
-        <app-contato
-          [nome]="'Raynara'"
-          [email]="'seila@email.com'"
-          [foto]="'https://avatars.githubusercontent.com/u/165175314?v=4'"
-          [github]="'blueray00'">
-        </app-contato>
-      </label>
-    </div>
-  </footer>
+        <div class="mb-4 mx-3 d-flex flex-column align-items-center">
+          <i class="bi bi-github" style="font-size: 2rem;"></i>
+          <app-contato
+            [nome]="'Pedro'"
+            [email]="'pedro.ferreira2@escolar.ifrn.edu.br'"
+            [foto]="'https://avatars.githubusercontent.com/u/165175268?v=4'"
+            [github]="'pedrop1009'">
+          </app-contato>
+        </div>
+
+        <div class="mb-4 mx-3 d-flex flex-column align-items-center">
+          <i class="bi bi-github" style="font-size: 2rem;"></i>
+          <app-contato
+            [nome]="'Marcelo'"
+            [email]="'henrique.cordeiro@escolar.ifrn.edu.br'"
+            [foto]="'https://avatars.githubusercontent.com/u/165174662?v=4&size=256'"
+            [github]="'SoulsXD'">
+          </app-contato>
+        </div>
+
+        <div class="mb-4 mx-3 d-flex flex-column align-items-center">
+          <i class="bi bi-github" style="font-size: 2rem;"></i>
+          <app-contato
+            [nome]="'Raynara'"
+            [email]="'raynara.gustavo@escolar.ifrn.edu.br'"
+            [foto]="'https://avatars.githubusercontent.com/u/165175314?v=4'"
+            [github]="'blueray00'">
+          </app-contato>
+        </div>
+      </div>
+    </label>
+    <div class="mt-4 text-body">© 2024 IFRN</div>
+  </div>
+</footer>
