@@ -1,28 +1,33 @@
-.row-cols-1 {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.col {
-  width: 45%;
-  margin: 10px;
-}
 .custom-card {
-  max-width: 45rem;
-  background-color: #212529;
-  color: #fff
-}
-
-button {
-  background-color: #141416;
+  background-color: black;
   color: white;
-  justify-content: center;
-  align-items: center;
-  height: 10vh;
-  border-radius: 10px;
+  border: none;
+  transition: all 0.3s ease-in-out;
 }
 
-.game-button:hover {
+.custom-card .card-body {
+  color: white;
+}
+
+.custom-card .card-title {
+  color: white;
+}
+
+.custom-card .card-text {
+  color: white;
+}
+
+.custom-card .btn-primary {
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+  transition: all 0.3s ease-in-out;
+}
+
+.custom-card .btn-primary:hover {
+  background-color: black;
+  color: white;
   transform: scale(1.1);
-  box-shadow: 0px 6px 25px rgb(144, 135, 219);
+  box-shadow: 0 0 15px 5px rgba(146, 7, 201, 0.5);
+  border: 2px solid #ff00ff;
 }
