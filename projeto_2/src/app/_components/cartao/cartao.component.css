@@ -1,17 +1,17 @@
+.row-cols-1 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col {
+  width: 45%;
+  margin: 10px;
+}
 .custom-card {
   max-width: 45rem;
-
+  background-color: #212529;
+  color: #fff
 }
-
-.custom-card img {
-
-  object-fit: cover;
-}
-
-.custom-card .card-body {
-  padding: 0.5rem;
-}
-
 
 button {
   background-color: #141416;
