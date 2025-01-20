@@ -11,7 +11,7 @@
 - Angular CLI v19.0.4
 
 ## Descrição do Projeto:
-- Ao zerar todos os jogos da galáxia, Davy Jones, em uma conversa telepática com os jovens universitários do IFRN, sugeriu a eles uma missão: espalhar toda a sua consciência de gameplay em um site que ele denominou Quest'pedia. A missão exigiria tempo, pois havia muitos jogos para adicionar ao site. Por isso, os jovens receberam a árdua tarefa de escolher os melhores jogos que eles (ou não) jogaram, ou que os leitores (também não) jogaram, para que o grande mago dos jogos, Davy Jones, pudesse contar as histórias, armas, personagens e tudo mais sobre eles.
+- Ao zerar todos os jogos da galáxia, Davy Jones, em uma conversa telepática com os jovens universitários do IFRN, sugeriu a eles uma missão: espalhar toda a sua consciência de gameplay em um site que ele denominou Quest'pedia. A missão exigiria tempo, pois havia muitos jogos para adicionar ao site. Por isso, os jovens receberam a árdua tarefa de escolher os melhores jogos que eles (ou não) jogaram, para que o grande mago dos jogos, Davy Jones, pudesse contar as histórias, armas, personagens e tudo mais sobre eles.
 
 ## Como rodar?
 - Entre no código do projeto, utilizando `cd projeto_2` e execute `ng serve` no terminal. Logo depois, acesse `http://localhost:4200/` no seu navegador e entre na melhor wiki do Brasil, magicamente sustentada pelo mago dos games, Davy Jones.
@@ -27,4 +27,3 @@
 - (?)
 - (?)
 - (?)
-- 
