@@ -1,15 +1,47 @@
 footer {
-    background-color: #343a40;
-    color: #fff;
-    padding: 20px 0;
-  }
+  background-color: #343a40;
+  color: #fff;
+  padding: 20px 0;
+}
 
-  footer .text-body {
-    font-size: 14px;
-  }
+footer .text-body {
+  font-size: 14px;
+}
 
-  footer .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-  }
+footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+#back-to-top {
+  position: fixed;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(83, 80, 80);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  font-size: 20px;
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
+  transition: background-color 0.3s ease, opacity 0.5s ease, visibility 0s linear 0.5s;
+  text-align: center;
+  line-height: 40px;
+}
+
+#back-to-top:hover {
+  background-color: #003975;
+}
+
+#back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transition: background-color 0.3s ease, opacity 0.5s ease, visibility 0s linear 0s;
+}
