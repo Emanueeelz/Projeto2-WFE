@@ -32,3 +32,10 @@
   box-shadow: 0 0 8px 2px rgba(146, 7, 201, 0.5);
   border: 2px solid #ff00ff;
 }
+
+.custom-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
