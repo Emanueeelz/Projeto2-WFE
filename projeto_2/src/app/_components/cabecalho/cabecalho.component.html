@@ -6,7 +6,7 @@
           <a class="nav-link p-0 text-white" href="#">Favoritos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link p-0 text-white" href="#">Mago</a>
+          <a class="nav-link p-0 text-white" href="#" data-bs-toggle="modal" data-bs-target="#magoModal">Mago</a>
         </li>
       </ul>
     </nav>
@@ -25,7 +25,7 @@
           <a class="nav-link p-0 text-white" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link p-0 text-white" href="#">Sobre</a>
+          <a class="nav-link p-0 text-white" href="#" data-bs-toggle="modal" data-bs-target="#sobreModal">Sobre</a>
         </li>
       </ul>
     </nav>
@@ -41,6 +41,40 @@
       </div>
       <div class="modal-body">
         <app-formulario></app-formulario>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="magoModal" tabindex="-1" aria-labelledby="magoModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="magoModalLabel">Mago</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <app-mago></app-mago>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="sobreModal" tabindex="-1" aria-labelledby="sobreModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="sobreModalLabel">Sobre</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <app-sobre></app-sobre>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
