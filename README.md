@@ -1,4 +1,4 @@
-# Quest'pedia - A wiki dos seus (ou nossos) jogos favoritos (ou não)
+# Quest'pedia - A wiki dos seus jogos favoritos (ou não)
 
 ## Integrantes do Projeto:
 - Marcelo Henrique Cordeiro e Souza.
@@ -25,9 +25,8 @@ https://www.npmjs.com/package/json-server
 - Cyberpunk 2077
 - Dark Souls 3
 - Red Dead Redemption 2
-- JoJo's Bizzare Adventure: Heritage for the Future (?)
-- Chrono Trigger (?)
-- (?)
-- (?)
+- JoJo's Bizzare Adventure: Heritage for the Future
+- Chrono Trigger
+- Counter-Strike: Global Offensive
 - (?)
 - (?)
