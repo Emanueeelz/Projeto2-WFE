@@ -28,5 +28,5 @@ https://www.npmjs.com/package/json-server
 - JoJo's Bizzare Adventure: Heritage for the Future
 - Chrono Trigger
 - Counter-Strike: Global Offensive
-- (?)
-- (?)
+- Blasphemous
+- Mineirinho Ultra Adventures
