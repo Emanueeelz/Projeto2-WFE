@@ -1,0 +1,57 @@
+/* <!-- teste -->
+
+
+/* Estilo geral */
+.pagina-clash {
+    background-color: #0a0a0a; /* Fundo escuro para destacar o conteúdo */
+    color: #ffffff; /* Texto branco para contraste */
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Estilização do título */
+  .pagina-clash h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fdd835; /* Amarelo ouro, remetendo ao Clash Royale */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Estilização do texto */
+  .pagina-clash p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 10px auto;
+    line-height: 1.5;
+    color: #dddddd;
+  }
+  
+  /* Estilização do botão */
+  .pagina-clash .btn-clash {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #fdd835;
+    color: #0a0a0a;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .pagina-clash .btn-clash:hover {
+    background-color: #ffeb3b; /* Amarelo mais claro no hover */
+    transform: scale(1.05);
+  }
+  
+  /* Imagem centralizada */
+  .pagina-clash img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0px 4px 8px rgba(255, 215, 53, 0.3);
+  }
+  

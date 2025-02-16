@@ -5,8 +5,6 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './pagina-clash.component.html',
-  styleUrl: './pagina-clash.component.css'
+  styleUrls: ['./pagina-clash.component.css']
 })
-export class PaginaClashComponent {
-
-}
+export class PaginaClashComponent { }
