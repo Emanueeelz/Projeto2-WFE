@@ -1,0 +1,28 @@
+.header {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 1.5rem;
+    text-align: center;
+  }
+  
+  .header p {
+    margin: 0;
+  }
+  
+  .navbar .navbar-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  .navbar .nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+  }
+  
+  .navbar .nav-link:hover {
+    color: #d1c4e9;
+    text-decoration: underline;
+  }
