@@ -1,1 +1,20 @@
-<p>corpo-jogo works!</p>
+<div class="wiki-container">
+  <aside class="sidebar">
+    <nav>
+      <ul>
+        <li><a routerLink="/">Início</a></li>
+        <li><a routerLink="/sobre">Sobre</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <header class="page-header">
+      <h1>{{ titulo }}</h1>
+    </header>
+
+    <section class="page-content">
+      <ng-content></ng-content>
+    </section>
+  </main>
+</div>
