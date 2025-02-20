@@ -23,7 +23,7 @@
       <ul class="navbar-nav">
         <!-- Exibe o nome do usuário ou o link de login -->
         <li class="nav-item" *ngIf="usuarioLogado$ | async as usuario; else loginLink">
-          <span class="nav-link p-0 text-white">Bem-vindo, {{ usuario?.nome }}</span>
+          <span class="nav-link p-0 text-white">{{ usuario?.nome }}</span>
         </li>
 
         <ng-template #loginLink>

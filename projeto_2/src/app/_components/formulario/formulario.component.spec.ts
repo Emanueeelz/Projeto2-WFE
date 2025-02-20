@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { FormularioComponent } from './formulario.component';
 
 describe('FormularioComponent', () => {
