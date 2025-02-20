@@ -3,14 +3,19 @@ import { CabecalhoComponent } from "../cabecalho/cabecalho.component";
 import { CartaoComponent } from "../cartao/cartao.component";
 import { RodapeComponent } from "../rodape/rodape.component";
 import { FormularioComponent } from "../formulario/formulario.component";
+import { RouterModule } from '@angular/router'; // Importando RouterModule para usar o router-outlet
 
 @Component({
   selector: 'app-corpo-site',
   standalone: true,
-  imports: [CabecalhoComponent, CartaoComponent, RodapeComponent, FormularioComponent],
+  imports: [
+    CabecalhoComponent,
+    CartaoComponent,
+    RodapeComponent,
+    FormularioComponent,
+    RouterModule // Importando RouterModule aqui para o uso do router-outlet
+  ],
   templateUrl: './corpo-site.component.html',
-  styleUrl: './corpo-site.component.css'
+  styleUrls: ['./corpo-site.component.css']
 })
-export class CorpoSiteComponent {
-
-}
+export class CorpoSiteComponent { }

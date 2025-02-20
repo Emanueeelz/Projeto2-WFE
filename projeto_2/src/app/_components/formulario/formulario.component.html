@@ -4,13 +4,27 @@
       <h5>Bem-vindo</h5>
     </div>
     <div class="card-body">
-      <form>
+      <form (ngSubmit)="login()">
+        <div class="mb-3">
+          <label for="nome" class="form-label">Nome</label>
+          <input
+            type="text"
+            class="form-control"
+            id="nome"
+            [(ngModel)]="nome"
+            name="nome"
+            placeholder="Digite seu nome"
+            required
+          />
+        </div>
         <div class="mb-3">
           <label for="email" class="form-label">Email</label>
           <input
             type="email"
             class="form-control"
             id="email"
+            [(ngModel)]="email"
+            name="email"
             placeholder="Digite seu email"
             required
           />
@@ -21,6 +35,8 @@
             type="password"
             class="form-control"
             id="senha"
+            [(ngModel)]="senha"
+            name="senha"
             placeholder="Digite sua senha"
             required
           />
