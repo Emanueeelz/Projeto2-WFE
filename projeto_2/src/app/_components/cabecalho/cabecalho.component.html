@@ -3,7 +3,7 @@
     <nav class="navbar navbar-expand-lg p-0">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link p-0 text-white" href="#">Favoritos</a>
+          <a class="nav-link p-0 text-white" href="#" data-bs-toggle="modal" data-bs-target="#favoritosModal">Favoritos</a>
         </li>
         <li class="nav-item">
           <a class="nav-link p-0 text-white" href="#" data-bs-toggle="modal" data-bs-target="#magoModal">Mago</a>
@@ -54,6 +54,19 @@
       </div>
       <div class="modal-body">
         <app-formulario></app-formulario>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="favoritosModal" tabindex="-1" aria-labelledby="favoritosModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="favoritosModalLabel">Favoritos</h5>
+      </div>
+      <div class="modal-body">
+        <app-favoritos></app-favoritos>
       </div>
     </div>
   </div>

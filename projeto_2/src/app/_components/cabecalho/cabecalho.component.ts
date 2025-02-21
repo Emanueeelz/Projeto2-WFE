@@ -4,29 +4,28 @@ import { MagoComponent } from "../mago/mago.component";
 import { SobreComponent } from "../sobre/sobre.component";
 import { AuthService } from '../../services/auth.service';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';  // Importando o operador map
-import { CommonModule } from '@angular/common';  // Importando o CommonModule
+import { map } from 'rxjs/operators'; 
+import { CommonModule } from '@angular/common';
+import { FavoritosComponent } from '../favoritos/favoritos.component';
 
 @Component({
   selector: 'app-cabecalho',
   standalone: true,
-  imports: [FormularioComponent, MagoComponent, SobreComponent, CommonModule],  // Adicionando CommonModule aqui
+  imports: [FormularioComponent, MagoComponent, SobreComponent, FavoritosComponent, CommonModule],
   templateUrl: './cabecalho.component.html',
   styleUrls: ['./cabecalho.component.css']
 })
 export class CabecalhoComponent {
   isMagoOpen = false;
   isSobreOpen = false;
+  isFavoritoOpen = false;
 
-  // Injetando o serviço de autenticação
   authService = inject(AuthService);
 
-  // Ajustando o tipo do usuarioLogado$ para ser um objeto com a propriedade nome
   usuarioLogado$: Observable<{ nome: string } | null> = this.authService.usuarioLogado$.pipe(
-    map(usuario => usuario ? usuario : null)  // Certificando-se de que o objeto de usuário está correto
+    map(usuario => usuario ? usuario : null)
   );
 
-  // Funções para abrir e fechar os modais
   abrirMago() {
     this.isMagoOpen = true;
   }
@@ -43,7 +42,14 @@ export class CabecalhoComponent {
     this.isSobreOpen = false;
   }
 
-  // Função de logout
+  abrirFavorito() {
+    this.isFavoritoOpen = true;
+  }
+
+  fecharFavorito() {
+    this.isFavoritoOpen = false;
+  }
+
   logout() {
     this.authService.logout();
   }
