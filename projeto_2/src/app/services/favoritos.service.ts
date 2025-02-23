@@ -9,8 +9,16 @@ export class FavoritosService {
   private favoritosSubject = new BehaviorSubject<string[]>([]);
 
   constructor() {
+    this.carregarFavoritos(); 
+  }
+
+  private carregarFavoritos() {
+
+    const savedFavoritos = JSON.parse(localStorage.getItem('favoritos') || '[]');
+    this.favoritos = new Set(savedFavoritos);
     this.atualizarSubject();
   }
+
 
   toggleFavorito(jogo: string) {
     if (this.favoritos.has(jogo)) {
