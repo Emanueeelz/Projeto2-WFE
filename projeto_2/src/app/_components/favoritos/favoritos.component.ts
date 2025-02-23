@@ -1,12 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FavoritosService } from '../../services/favoritos.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-favoritos',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './favoritos.component.html',
-  styleUrl: './favoritos.component.css'
+  styleUrls: ['./favoritos.component.css']
 })
-export class FavoritosComponent {
+export class FavoritosComponent implements OnInit {
+  favoritos: string[] = [];
 
+  constructor(private favoritosService: FavoritosService) {}
+
+  ngOnInit() {
+    this.favoritosService.getFavoritosObservable().subscribe(favs => {
+      this.favoritos = favs;
+    });
+  }
 }

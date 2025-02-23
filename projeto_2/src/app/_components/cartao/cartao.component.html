@@ -2,93 +2,121 @@
   <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
     <div class="col">
       <div class="card custom-card">
-        <img src="https://t2.tudocdn.net/366920?w=1920" class="card-img-top" alt="...">
+        <img src="https://t2.tudocdn.net/366920?w=1920" class="card-img-top" alt="Clash Royale">
         <div class="card-body">
           <h5 class="card-title">Clash Royale</h5>
           <p class="card-text">Duelos rápidos, estratégia afiada e reviravoltas épicas!! Cada carta pode mudar tudo. Você está pronto para a batalha?</p>
           <a [routerLink]="['/clash']" class="btn btn-primary">Gaste elixir na arena</a>
+          <div (click)="toggleFavorito('Clash Royale')">
+            <i [ngClass]="isFavorito('Clash Royale') ? 'fas fa-heart text-red-500' : 'far fa-heart text-gray-500'"></i>
+          </div>
         </div>
       </div>
     </div>
     <div class="col">
+      <div class="card custom-card"></div>
       <div class="card custom-card">
-        <img src="https://cdn1.epicgames.com/offer/77f2b98e2cef40c8a7437518bf420e47/EGS_Cyberpunk2077_CDPROJEKTRED_S1_03_2560x1440-359e77d3cd0a40aebf3bbc130d14c5c7" class="card-img-top" alt="...">
+        <img src="https://cdn1.epicgames.com/offer/77f2b98e2cef40c8a7437518bf420e47/EGS_Cyberpunk2077_CDPROJEKTRED_S1_03_2560x1440-359e77d3cd0a40aebf3bbc130d14c5c7" class="card-img-top" alt="Cyberpunk 2077">
         <div class="card-body">
           <h5 class="card-title">Cyberpunk 2077</h5>
           <p class="card-text">Um futuro caótico, uma cidade sem leis e um mercenário em busca da imortalidade. Até onde você iria para se tornar uma lenda?</p>
           <a [routerLink]="['/cyberpunk']" class="btn btn-primary">Conecte-se a Night City</a>
+          <div (click)="toggleFavorito('Cyberpunk 2077')">
+            <i [ngClass]="isFavorito('Cyberpunk 2077') ? 'fas fa-heart text-red-500' : 'far fa-heart text-gray-500'"></i>
+          </div>
         </div>
       </div>
     </div>
     <div class="col">
       <div class="card custom-card">
-        <img src="https://store-images.s-microsoft.com/image/apps.61214.71827372323164480.6e97c7d2-899a-404f-8660-d622a7fc9162.740b1351-e659-486b-9d1c-948e0d928ead?q=90&w=480&h=270" class="card-img-top" alt="...">
+        <img src="https://store-images.s-microsoft.com/image/apps.61214.71827372323164480.6e97c7d2-899a-404f-8660-d622a7fc9162.740b1351-e659-486b-9d1c-948e0d928ead?q=90&w=480&h=270" class="card-img-top" alt="Dark Souls 3">
         <div class="card-body">
           <h5 class="card-title">Dark Souls 3</h5>
           <p class="card-text">Cinzas e escuridão dominam um mundo à beira do fim. Você se erguerá para desafiar deuses e monstros ou sucumbirá às chamas?</p>
           <a [routerLink]="['/dark-souls']" class="btn btn-primary">Busque as almas</a>
+          <div (click)="toggleFavorito('Dark Souls 3')">
+            <i [ngClass]="isFavorito('Dark Souls 3') ? 'fas fa-heart text-red-500' : 'far fa-heart text-gray-500'"></i>
+          </div>
         </div>
       </div>
     </div>
     <div class="col">
       <div class="card custom-card">
-        <img src="https://tm.ibxk.com.br/2024/06/18/18184036608373.jpg?ims=750x" class="card-img-top" alt="...">
+        <img src="https://tm.ibxk.com.br/2024/06/18/18184036608373.jpg?ims=750x" class="card-img-top" alt="Red Dead Redemption 2">
         <div class="card-body">
           <h5 class="card-title">Red Dead Redemption 2</h5>
           <p class="card-text">O Velho Oeste está morrendo, e com ele, os foras da lei. Em um mundo que não perdoa, você lutará para sobreviver ou será esquecido?</p>
           <a [routerLink]="['/red-dead']" class="btn btn-primary">Entre aos Van der Linde</a>
+          <div (click)="toggleFavorito('Red Dead Redemption 2')">
+            <i [ngClass]="isFavorito('Red Dead Redemption 2') ? 'fas fa-heart text-red-500' : 'far fa-heart text-gray-500'"></i>
+          </div>
         </div>
       </div>
     </div>
     <div class="col">
       <div class="card custom-card">
-        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjo8pHJzE98c08GVxfI26_x9vlHYE-hpSi4hQpyswF4OUJeZ76uhsDoeKY3SlrPw6Utx5FY56Xjp-AobKX-eXcEItdGuBSQ81TLDb59y-DOoMGzOtkgI7V_ZDJ4AU3LRG_RY7WayucywvdC/s1600/capa.png" class="card-img-top" alt="...">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjo8pHJzE98c08GVxfI26_x9vlHYE-hpSi4hQpyswF4OUJeZ76uhsDoeKY3SlrPw6Utx5FY56Xjp-AobKX-eXcEItdGuBSQ81TLDb59y-DOoMGzOtkgI7V_ZDJ4AU3LRG_RY7WayucywvdC/s1600/capa.png" class="card-img-top" alt="JoJo's Bizarre Adventure: Heritage for the Future">
         <div class="card-body">
           <h5 class="card-title">JoJo's Bizarre Adventure: Heritage for the Future</h5>
           <p class="card-text">Stand contra Stand!! O tempo está passando, você tem o que é preciso para mudar o "Mundo"?</p>
           <a [routerLink]="['/jojo']" class="btn btn-primary">Derrote Dio Brando</a>
+          <div (click)="toggleFavorito('JoJo\'s Bizarre Adventure: Heritage for the Future')">
+            <i [ngClass]="isFavorito('JoJo\'s Bizarre Adventure: Heritage for the Future') ? 'fas fa-heart text-red-500' : 'far fa-heart text-gray-500'"></i>
+          </div>
         </div>
       </div>
     </div>
     <div class="col">
       <div class="card custom-card">
-        <img src="https://funfactor.pt/wp-content/uploads/2018/07/chrono-trigger.jpeg?w=1280&h=720&crop=1" class="card-img-top" alt="...">
+        <img src="https://funfactor.pt/wp-content/uploads/2018/07/chrono-trigger.jpeg?w=1280&h=720&crop=1" class="card-img-top" alt="Chrono Trigger">
         <div class="card-body">
           <h5 class="card-title">Chrono Trigger</h5>
           <p class="card-text">Eras se entrelaçam! Viaje pelo tempo e enfrente ameaças que transcendem a história. Você conseguirá mudar o futuro?</p>
           <a [routerLink]="['/chrono-trigger']" class="btn btn-primary">Atravesse o tempo</a>
+          <div (click)="toggleFavorito('Chrono Trigger')">
+            <i [ngClass]="isFavorito('Chrono Trigger') ? 'fas fa-heart text-red-500' : 'far fa-heart text-gray-500'"></i>
+          </div>
         </div>
       </div>
     </div>
     <div class="col">
       <div class="card custom-card">
-        <img src="https://www.pichauarena.com.br/wp-content/uploads/2022/01/csgotr.jpg" class="card-img-top" alt="...">
+        <img src="https://www.pichauarena.com.br/wp-content/uploads/2022/01/csgotr.jpg" class="card-img-top" alt="Counter-Strike: Global Offensive">
         <div class="card-body">
           <h5 class="card-title">Counter-Strike: Global Offensive</h5>
           <p class="card-text">Terroristas vs. Contra-Terroristas. Uma tensão incessante que com um único objetivo, espalhar o caos (ou impedir a mesma). Está preparado?</p>
           <a [routerLink]="['/csgo']" class="btn btn-primary">Desarme (ou arme)</a>
+          <div (click)="toggleFavorito('Counter-Strike: Global Offensive')">
+            <i [ngClass]="isFavorito('Counter-Strike: Global Offensive') ? 'fas fa-heart text-red-500' : 'far fa-heart text-gray-500'"></i>
+          </div>
         </div>
       </div>
     </div>
     <div class="col">
       <div class="card custom-card">
-        <img src="https://i.ytimg.com/vi/pPQh57keVQg/maxresdefault.jpg" class="card-img-top" alt="...">
+        <img src="https://i.ytimg.com/vi/pPQh57keVQg/maxresdefault.jpg" class="card-img-top" alt="Mineirinho Ultra Adventure">
         <div class="card-body">
           <h5 class="card-title">Mineirinho Ultra Adventure</h5>
           <p class="card-text">Esta é a primeira, rara e clássica versão do nosso amigo Mineirinho, muitas aventuras no mundo 3D com um toque de nostalgia e uma aventura gloriosa.</p>
           <a [routerLink]="['/mineirinho']" class="btn btn-primary">Voe alto</a>
+          <div (click)="toggleFavorito('Mineirinho Ultra Adventure')">
+            <i [ngClass]="isFavorito('Mineirinho Ultra Adventure') ? 'fas fa-heart text-red-500' : 'far fa-heart text-gray-500'"></i>
+          </div>
         </div>
       </div>
     </div>
     <div class="col">
       <div class="card custom-card">
-        <img src="https://selecta-play.com/13389/blasphemous-edicion-coleccionista-nintendo-switch.jpg" class="card-img-top" alt="...">
+        <img src="https://selecta-play.com/13389/blasphemous-edicion-coleccionista-nintendo-switch.jpg" class="card-img-top" alt="Blasphemous">
         <div class="card-body">
           <h5 class="card-title">Blasphemous</h5>
           <p class="card-text">Um mundo condenado, uma fé distorcida e um penitente em busca de redenção. Sacrifício e sofrimento o guiarão, você suportará essa culpa?</p>
           <a [routerLink]="['/blasphemous']" class="btn btn-primary">Expie seus pecados</a>
+          <div (click)="toggleFavorito('Blasphemous')">
+            <i [ngClass]="isFavorito('Blasphemous') ? 'fas fa-heart text-red-500' : 'far fa-heart text-gray-500'"></i>
         </div>
       </div>
     </div>
   </div>
 </div>
+<div class="container my-5">

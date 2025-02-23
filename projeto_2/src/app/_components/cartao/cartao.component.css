@@ -39,3 +39,20 @@
   object-fit: cover;
   border-radius: 10px;
 }
+
+.row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+}
+
+.col {
+  flex: 1 1 30%; /* Mantém aproximadamente 3 colunas */
+  max-width: 30%; /* Garante que os cartões não fiquem enormes */
+}
+
+@media (max-width: 768px) {
+  .col {
+    flex: 1 1 100%; /* Em telas pequenas, cada cartão ocupa a linha inteira */
+    max-width: 100%;
+  }
+}

@@ -23,8 +23,11 @@ export class CabecalhoComponent {
   authService = inject(AuthService);
 
   usuarioLogado$: Observable<{ nome: string } | null> = this.authService.usuarioLogado$.pipe(
-    map(usuario => usuario ? usuario : null)
-  );
+      map(usuario => usuario ? usuario : null)
+    );
+  
+    mostrarFavoritos = false;
+  ;
 
   abrirMago() {
     this.isMagoOpen = true;
