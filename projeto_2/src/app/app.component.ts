@@ -1,9 +1,8 @@
-
 import { Component } from '@angular/core';
 import { CabecalhoComponent } from './_components/cabecalho/cabecalho.component';
 import { RodapeComponent } from './_components/rodape/rodape.component';
-import { RouterModule } from '@angular/router';
-import { CorpoSiteComponent } from "./_components/corpo-site/corpo-site.component"; // Importando RouterModule
+import { RouterModule, Router, NavigationEnd } from '@angular/router';
+import { CorpoSiteComponent } from "./_components/corpo-site/corpo-site.component";
 
 @Component({
   selector: 'app-root',
@@ -11,13 +10,22 @@ import { CorpoSiteComponent } from "./_components/corpo-site/corpo-site.componen
   imports: [
     CabecalhoComponent,
     RodapeComponent,
-    RouterModule // Incluindo RouterModule no imports para usar router-outlet
-    ,
+    RouterModule,
     CorpoSiteComponent
-],
+  ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
   title = 'projeto_2';
+
+  constructor(private router: Router) {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        setTimeout(() => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }, 100);
+      }
+    });
+  }
 }

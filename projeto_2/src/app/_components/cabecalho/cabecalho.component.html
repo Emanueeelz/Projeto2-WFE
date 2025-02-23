@@ -21,7 +21,6 @@
 
     <nav class="navbar navbar-expand-lg p-0 ml-auto">
       <ul class="navbar-nav">
-        <!-- Exibe o nome do usuário ou o link de login -->
         <li class="nav-item" *ngIf="usuarioLogado$ | async as usuario; else loginLink">
           <span class="nav-link p-0 text-white">{{ usuario?.nome }}</span>
         </li>
@@ -32,7 +31,6 @@
           </li>
         </ng-template>
 
-        <!-- Botão de logout quando o usuário está logado -->
         <li class="nav-item" *ngIf="usuarioLogado$ | async">
           <button class="nav-link p-0 text-white btn btn-link" (click)="logout()">Sair</button>
         </li>
@@ -45,7 +43,6 @@
   </div>
 </header>
 
-<!-- Modais -->
 <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
