@@ -1,12 +1,12 @@
 import { Component, inject } from '@angular/core';
-import { FormularioComponent } from "../formulario/formulario.component";
+import { FormularioComponent } from "../../home/formulario/formulario.component";
 import { MagoComponent } from "../mago/mago.component";
 import { SobreComponent } from "../sobre/sobre.component";
-import { AuthService } from '../../services/auth.service';
+import { AuthService } from '../../../services/auth.service';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators'; 
 import { CommonModule } from '@angular/common';
-import { FavoritosComponent } from '../favoritos/favoritos.component';
+import { FavoritosComponent } from '../../home/favoritos/favoritos.component';
 
 @Component({
   selector: 'app-cabecalho',

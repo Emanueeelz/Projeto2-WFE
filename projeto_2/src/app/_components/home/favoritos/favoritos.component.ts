@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FavoritosService } from '../../services/favoritos.service';
+import { Component, OnInit, Inject } from '@angular/core';
+import { FavoritosService } from '../../../services/favoritos.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
 export class FavoritosComponent implements OnInit {
   favoritos: string[] = [];
 
-  constructor(private favoritosService: FavoritosService) {}
+  constructor(@Inject(FavoritosService) private favoritosService: FavoritosService) {}
 
   ngOnInit() {
     this.favoritosService.getFavoritosObservable().subscribe(favs => {

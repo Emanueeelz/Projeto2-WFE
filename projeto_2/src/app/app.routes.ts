@@ -2,21 +2,21 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 // Importação dos componentes
-import { PaginaClashComponent } from './_components/pagina-clash/pagina-clash.component';
-import { PaginaCyberComponent } from './_components/pagina-cyber/pagina-cyber.component';
-import { PaginaDarkSoulsComponent } from './_components/pagina-dark-souls/pagina-dark-souls.component';
-import { PaginaRedDeadComponent } from './_components/pagina-red-dead/pagina-red-dead.component';
-import { PaginaJojoComponent } from './_components/pagina-jojo/pagina-jojo.component';
-import { PaginaChronoComponent } from './_components/pagina-chrono/pagina-chrono.component';
-import { PaginaCsComponent } from './_components/pagina-cs/pagina-cs.component';
-import { PaginaMineirinhoComponent } from './_components/pagina-mineirinho/pagina-mineirinho.component';
-import { PaginaBlasComponent } from './_components/pagina-blas/pagina-blas.component';
-import { CorpoSiteComponent } from './_components/corpo-site/corpo-site.component'; // Certifique-se de importar o CorpoSiteComponent
+import { PaginaClashComponent } from './_components/pages/pagina-clash/pagina-clash.component';
+import { PaginaCyberComponent } from './_components/pages/pagina-cyber/pagina-cyber.component';
+import { PaginaDarkSoulsComponent } from './_components/pages/pagina-dark-souls/pagina-dark-souls.component';
+import { PaginaRedDeadComponent } from './_components/pages/pagina-red-dead/pagina-red-dead.component';
+import { PaginaJojoComponent } from './_components/pages/pagina-jojo/pagina-jojo.component';
+import { PaginaChronoComponent } from './_components/pages/pagina-chrono/pagina-chrono.component';
+import { PaginaCsComponent } from './_components/pages/pagina-cs/pagina-cs.component';
+import { PaginaMineirinhoComponent } from './_components/pages/pagina-mineirinho/pagina-mineirinho.component';
+import { PaginaBlasComponent } from './_components/pages/pagina-blas/pagina-blas.component';
+import { CorpoSiteComponent } from './_components/home/corpo-site/corpo-site.component';
 
 // Exportando a constante de rotas
 export const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' }, // Rota padrão para a página inicial
-  { path: 'home', component: CorpoSiteComponent }, // Página inicial, que é o CorpoSiteComponent
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home', component: CorpoSiteComponent },
   { path: 'clash', component: PaginaClashComponent },
   { path: 'cyberpunk', component: PaginaCyberComponent },
   { path: 'dark-souls', component: PaginaDarkSoulsComponent },
@@ -29,7 +29,7 @@ export const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)], // Configurações de rota
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule {}

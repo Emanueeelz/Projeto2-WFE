@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { CabecalhoComponent } from './_components/cabecalho/cabecalho.component';
-import { RodapeComponent } from './_components/rodape/rodape.component';
+import { CabecalhoComponent } from './_components/home/cabecalho/cabecalho.component';
+import { RodapeComponent } from './_components/home/rodape/rodape.component';
 import { RouterModule, Router, NavigationEnd } from '@angular/router';
-import { CorpoSiteComponent } from "./_components/corpo-site/corpo-site.component";
+import { CorpoSiteComponent } from "./_components/home/corpo-site/corpo-site.component";
 
 @Component({
   selector: 'app-root',

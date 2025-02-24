@@ -12,7 +12,6 @@ import { RouterModule } from '@angular/router';
     CabecalhoComponent,
     CartaoComponent,
     RodapeComponent,
-    FormularioComponent,
     RouterModule
   ],
   templateUrl: './corpo-site.component.html',
