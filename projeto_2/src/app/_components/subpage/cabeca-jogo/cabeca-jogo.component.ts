@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FavoritosService } from '../../services/favoritos.service';
+import { FavoritosService } from '../../../services/favoritos.service';
 
 @Component({
   selector: 'app-cabeca-jogo',
