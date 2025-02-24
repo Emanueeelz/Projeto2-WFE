@@ -1,17 +1,12 @@
 import { Component } from '@angular/core';
-import { CabecalhoComponent } from './_components/home/cabecalho/cabecalho.component';
-import { RodapeComponent } from './_components/home/rodape/rodape.component';
 import { RouterModule, Router, NavigationEnd } from '@angular/router';
-import { CorpoSiteComponent } from "./_components/home/corpo-site/corpo-site.component";
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
-    CabecalhoComponent,
-    RodapeComponent,
-    RouterModule,
-    CorpoSiteComponent
+    RouterModule
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
