@@ -1,10 +1,11 @@
 <div class="container mt-5">
-  <div class="card mx-auto" style="max-width: 400px;">
+  <div class="card mx-auto shadow" style="max-width: 400px;">
     <div class="card-header text-center bg-primary text-white">
       <h5>Bem-vindo</h5>
     </div>
     <div class="card-body">
       <form (ngSubmit)="login()">
+        <!-- Nome -->
         <div class="mb-3">
           <label for="nome" class="form-label">Nome</label>
           <input
@@ -14,9 +15,12 @@
             [(ngModel)]="nome"
             name="nome"
             placeholder="Digite seu nome"
+            autocomplete="name"
             required
           />
         </div>
+
+        <!-- Email -->
         <div class="mb-3">
           <label for="email" class="form-label">Email</label>
           <input
@@ -26,9 +30,12 @@
             [(ngModel)]="email"
             name="email"
             placeholder="Digite seu email"
+            autocomplete="email"
             required
           />
         </div>
+
+        <!-- Senha -->
         <div class="mb-3">
           <label for="senha" class="form-label">Senha</label>
           <input
@@ -38,14 +45,21 @@
             [(ngModel)]="senha"
             name="senha"
             placeholder="Digite sua senha"
+            autocomplete="current-password"
             required
           />
         </div>
+
+        <!-- Botão de login -->
         <div class="d-grid">
-          <button type="submit" class="btn btn-primary">Entrar</button>
+          <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">
+            Entrar
+          </button>
         </div>
       </form>
     </div>
+
+    <!-- Rodapé do card -->
     <div class="card-footer text-center text-muted">
       Esqueceu sua senha? <a href="#">Clique aqui</a>
     </div>
