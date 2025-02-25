@@ -7,7 +7,5 @@ import { Component, Input} from '@angular/core';
   templateUrl: './corpo-jogo.component.html',
   styleUrl: './corpo-jogo.component.css'
 })
-export class CorpoJogoComponent {
-  
-}
+export class CorpoJogoComponent {}
 
