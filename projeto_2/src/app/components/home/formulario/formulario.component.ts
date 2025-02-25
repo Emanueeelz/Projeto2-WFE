@@ -18,6 +18,7 @@ export class FormularioComponent implements OnInit {
   authService = inject(AuthService);
 
   @ViewChild('loginModal') loginModal!: ElementRef;
+usu: any;
 
   ngOnInit() {
     this.authService.fecharPopup$.subscribe((fechar) => {
@@ -25,7 +26,7 @@ export class FormularioComponent implements OnInit {
         const modalElement = this.loginModal.nativeElement;
         if (modalElement) {
           const modal = new Modal(modalElement);
-          modal.hide(); 
+          modal.hide();
         }
       }
     });
