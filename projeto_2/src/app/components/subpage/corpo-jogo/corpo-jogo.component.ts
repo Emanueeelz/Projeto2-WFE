@@ -1,11 +1,17 @@
-import { Component, Input} from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-corpo-jogo',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './corpo-jogo.component.html',
-  styleUrl: './corpo-jogo.component.css'
+  styleUrls: ['./corpo-jogo.component.css']
 })
-export class CorpoJogoComponent {}
+export class CorpoJogoComponent implements OnChanges {
+  @Input() jogo: any;
 
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log("Mudança detectada no jogo:", changes['jogo']?.currentValue);
+  }
+}

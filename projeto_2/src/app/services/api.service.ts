@@ -15,6 +15,7 @@ export class ApiService {
   }
 
   getJogoById(id: number): Observable<any> {
+    console.log(`Buscando jogo com ID: ${id}`);
     return this.http.get<any>(`${this.apiUrl}/${id}`);
   }
 }

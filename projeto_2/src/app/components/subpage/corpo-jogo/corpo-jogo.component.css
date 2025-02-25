@@ -4,6 +4,8 @@
   background-color: #1e1e2e;
   color: #f8f8f2;
   font-family: Arial, sans-serif;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 .content {
@@ -13,15 +15,44 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .page-header {
   width: 100%;
   display: flex;
+  justify-content: center;
 }
 
 .page-header h1 {
   margin-bottom: 20px;
   color: #ff00ff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+
+.game-images {
+  margin-top: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.imagens {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 15px;
+  overflow-x: auto;
+  width: 100%;
+  justify-content: center;
+}
+
+.imagens img {
+  flex: 0 0 auto;
+  width: 700px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }

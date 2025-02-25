@@ -1,6 +1,19 @@
-<div class="wiki-container">
+<div class="wiki-container" *ngIf="jogo" style="overflow: hidden;">
   <main class="content">
     <header class="page-header">
+      <h1>{{ jogo.titulo }}</h1>
     </header>
+    <section class="game-details">
+      <p><strong>Descrição:</strong> {{ jogo.descricao }}</p>
+      <p><strong>História:</strong> {{ jogo.historia }}</p>
+      <p><strong>Gênero:</strong> {{ jogo.genero }}</p>
+      <p><strong>Plataformas:</strong> {{ jogo.plataforma }}</p>
+      <p><strong>Ano de lançamento:</strong> {{ jogo.ano }}</p>
+      <div class="game-images">
+        <div class="imagens">
+          <img *ngFor="let imagem of jogo.imagens" [src]="imagem" alt="Imagem do jogo">
+        </div>
+      </div>
+    </section>
   </main>
 </div>

@@ -1,23 +1,31 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { CabecaJogoComponent } from '../../subpage/cabeca-jogo/cabeca-jogo.component';
 import { RodapeJogoComponent } from "../../subpage/rodape-jogo/rodape-jogo.component";
 import { CorpoJogoComponent } from "../../subpage/corpo-jogo/corpo-jogo.component";
 import { ApiService } from '../../../services/api.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-pagina-cyber',
   standalone: true,
-  imports: [CabecaJogoComponent, RodapeJogoComponent, CorpoJogoComponent],
+  imports: [CommonModule, CabecaJogoComponent, RodapeJogoComponent, CorpoJogoComponent],
   templateUrl: './pagina-cyber.component.html',
   styleUrls: ['./pagina-cyber.component.css']
 })
-export class PaginaCyberComponent {
+export class PaginaCyberComponent implements OnInit {
   private apiService = inject(ApiService);
+  jogo: any;
 
-  constructor() {
-    console.log("PaginaCyberComponent");
-    this.apiService.getJogoById(12).subscribe(data => {
-      console.log("data", data);
+  ngOnInit(): void {
+    console.log("paginacyberpunkcomponent carregado");
+    this.apiService.getJogoById(2).subscribe({
+      next: (data) => {
+        this.jogo = data;
+        console.log("Dados do jogo recebidos:", this.jogo);
+      },
+      error: (error) => {
+        console.error("Erro ao buscar os dados do jogo:", error);
+      }
     });
   }
 }
