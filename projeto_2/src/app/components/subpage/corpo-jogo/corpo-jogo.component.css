@@ -18,10 +18,29 @@
 .page-header {
   width: 100%;
   display: flex;
+  justify-content: center;
 }
 
 .page-header h1 {
   margin-bottom: 20px;
   color: #ff00ff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.tables-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  flex-grow: 1;
+}
+
+.game-box {
+  width: 55%;
+  height: 90vh;
+  background-color: #282a36;
+  border-radius: 10px;
+  padding: 15px;
+  overflow-y: auto;
 }

@@ -8,6 +8,6 @@ import { Component, Input} from '@angular/core';
   styleUrl: './corpo-jogo.component.css'
 })
 export class CorpoJogoComponent {
-  @Input() titulo: string = 'Título da Página';
+  
 }
 
