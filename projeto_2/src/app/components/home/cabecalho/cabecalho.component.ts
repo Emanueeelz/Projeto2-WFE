@@ -4,9 +4,11 @@ import { MagoComponent } from "../mago/mago.component";
 import { SobreComponent } from "../sobre/sobre.component";
 import { AuthService } from '../../../services/auth.service';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators'; 
+import { map } from 'rxjs/operators';
 import { CommonModule } from '@angular/common';
 import { FavoritosComponent } from '../../home/favoritos/favoritos.component';
+import * as bootstrap from 'bootstrap';
+
 
 @Component({
   selector: 'app-cabecalho',
@@ -22,35 +24,16 @@ export class CabecalhoComponent {
 
   authService = inject(AuthService);
 
-  usuarioLogado$: Observable<{ nome: string } | null> = this.authService.usuarioLogado$.pipe(
-      map(usuario => usuario ? usuario : null)
-    );
-  
-    mostrarFavoritos = false;
-  ;
+  usuarioLogado$: Observable<{ nome: string; email: string } | null> = this.authService.usuarioLogado$.pipe(
+    map(usuario => usuario ? { nome: usuario.nome, email: usuario.email } : null)
+  );
 
-  abrirMago() {
-    this.isMagoOpen = true;
-  }
-
-  fecharMago() {
-    this.isMagoOpen = false;
-  }
-
-  abrirSobre() {
-    this.isSobreOpen = true;
-  }
-
-  fecharSobre() {
-    this.isSobreOpen = false;
-  }
-
-  abrirFavorito() {
-    this.isFavoritoOpen = true;
-  }
-
-  fecharFavorito() {
-    this.isFavoritoOpen = false;
+  togglePopup() {
+    const sairModal = document.getElementById('sairModal');
+    if (sairModal) {
+      const modal = new bootstrap.Modal(sairModal);
+      modal.show();
+    }
   }
 
   logout() {

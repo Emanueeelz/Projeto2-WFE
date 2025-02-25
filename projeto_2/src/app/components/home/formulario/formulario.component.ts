@@ -1,6 +1,7 @@
 import { Component, inject, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { AuthService } from '../../../services/auth.service';
 import { FormsModule } from '@angular/forms';
+import { Modal } from 'bootstrap';
 
 @Component({
   selector: 'app-formulario',
@@ -21,7 +22,11 @@ export class FormularioComponent implements OnInit {
   ngOnInit() {
     this.authService.fecharPopup$.subscribe((fechar) => {
       if (fechar && this.loginModal) {
-        (this.loginModal.nativeElement as any).click(); // Fecha o modal Bootstrap
+        const modalElement = this.loginModal.nativeElement;
+        if (modalElement) {
+          const modal = new Modal(modalElement);
+          modal.hide(); 
+        }
       }
     });
   }

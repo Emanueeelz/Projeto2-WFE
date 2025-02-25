@@ -15,7 +15,7 @@ export class AuthService {
 
   login(nome: string, email: string) {
     this.usuarioLogadoSubject.next({ nome, email });
-    this.fecharPopupSubject.next(true); // Emite o evento para fechar o modal
+    this.fecharPopupSubject.next(true);
   }
 
   logout() {
