@@ -1,7 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { FavoritosService } from '../../../services/favoritos.service';
 import { CommonModule } from '@angular/common';
-import { RouterModule, Router } from '@angular/router';
+import { RouterModule, Router, NavigationStart } from '@angular/router'; 
 import * as bootstrap from 'bootstrap';
 
 @Component({
@@ -24,6 +24,13 @@ export class FavoritosComponent implements OnInit {
       this.favoritos = favs;
       console.log("Jogos nos favoritos:", this.favoritos);
     });
+
+
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationStart) {
+        this.fecharModalBootstrap();
+      }
+    });
   }
 
   irParaPagina(jogo: string) {
@@ -41,13 +48,11 @@ export class FavoritosComponent implements OnInit {
 
     const rota = rotas[jogo] || 'home';
 
-    // Fecha o modal corretamente
+
     this.fecharModalBootstrap();
 
-    // Pequeno delay para evitar transição abrupta antes da navegação
-    setTimeout(() => {
-      this.router.navigate(['/', rota]);
-    }, 300);
+
+    this.router.navigate([rota]);
   }
 
   private fecharModalBootstrap() {
@@ -60,12 +65,10 @@ export class FavoritosComponent implements OnInit {
       }
     }
 
-    // Adiciona um tempo para garantir a remoção do backdrop
-    setTimeout(() => {
-      this.removerBackdrop();
-    }, 500);
 
-    // Notifica o serviço que o modal foi fechado
+    this.removerBackdrop();
+
+
     this.favoritosService.fecharModalFavoritos();
   }
 
