@@ -7,7 +7,6 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { CommonModule } from '@angular/common';
 import { FavoritosComponent } from '../../home/favoritos/favoritos.component';
-import * as bootstrap from 'bootstrap';
 
 
 @Component({
@@ -34,10 +33,19 @@ throw new Error('Method not implemented.');
   togglePopup() {
     const sairModal = document.getElementById('sairModal');
     if (sairModal) {
-      const modal = new bootstrap.Modal(sairModal);
-      modal.show();
+      sairModal.style.display = 'block';
+      sairModal.classList.add('show');
     }
   }
+
+  closePopup() {
+    const sairModal = document.getElementById('sairModal');
+    if (sairModal) {
+      sairModal.style.display = 'none';
+      sairModal.classList.remove('show');
+    }
+  }
+
 
   logout() {
     this.authService.logout();
