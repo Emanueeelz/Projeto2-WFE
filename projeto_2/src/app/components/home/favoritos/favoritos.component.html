@@ -1,6 +1,8 @@
 <div *ngIf="favoritos.length > 0; else vazio">
   <ul>
-    <li *ngFor="let jogo of favoritos" (click)="irParaPagina(jogo)" style="cursor: pointer; text-decoration: underline; color: blue;">
+    <li *ngFor="let jogo of favoritos"
+        (click)="irParaPagina(jogo)"
+        style="cursor: pointer; text-decoration: underline; color: blue;">
       {{ jogo }}
     </li>
   </ul>
@@ -9,3 +11,4 @@
 <ng-template #vazio>
   <p>Nenhum jogo favoritado.</p>
 </ng-template>
+

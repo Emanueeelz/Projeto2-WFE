@@ -2,6 +2,7 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { FavoritosService } from '../../../services/favoritos.service';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Router } from '@angular/router';
+import * as bootstrap from 'bootstrap';
 
 @Component({
   selector: 'app-favoritos',
@@ -21,10 +22,9 @@ export class FavoritosComponent implements OnInit {
   ngOnInit() {
     this.favoritosService.getFavoritosObservable().subscribe(favs => {
       this.favoritos = favs;
-      console.log("Jogos nos favoritos:", this.favoritos); 
+      console.log("Jogos nos favoritos:", this.favoritos);
     });
   }
-  
 
   irParaPagina(jogo: string) {
     const rotas: { [key: string]: string } = {
@@ -41,22 +41,46 @@ export class FavoritosComponent implements OnInit {
 
     const rota = rotas[jogo] || 'home';
 
+    // Fecha o modal corretamente
+    this.fecharModalBootstrap();
+
+    // Pequeno delay para evitar transição abrupta antes da navegação
+    setTimeout(() => {
+      this.router.navigate(['/', rota]);
+    }, 300);
+  }
+
+  private fecharModalBootstrap() {
     const modalElement = document.getElementById('favoritosModal');
+
     if (modalElement) {
-      modalElement.classList.remove('show');
-      modalElement.setAttribute('aria-hidden', 'true');
-      modalElement.style.display = 'none';
-  
-      const backdrop = document.querySelector('.modal-backdrop');
-      if (backdrop) {
-        backdrop.remove();
+      const modalInstance = bootstrap.Modal.getInstance(modalElement);
+      if (modalInstance) {
+        modalInstance.hide();
       }
     }
-    document.body.classList.remove('modal-open');
-    document.body.style.overflow = ''; 
-    document.body.style.overflowX = 'hidden';
-    setTimeout(() => document.body.style.overflowX = '', 500); ;
-  
-    this.router.navigate(['/', rota]);
+
+    // Adiciona um tempo para garantir a remoção do backdrop
+    setTimeout(() => {
+      this.removerBackdrop();
+    }, 500);
+
+    // Notifica o serviço que o modal foi fechado
+    this.favoritosService.fecharModalFavoritos();
+  }
+
+  removerBackdrop() {
+    setTimeout(() => {
+      document.querySelectorAll('.modal-backdrop').forEach(backdrop => backdrop.remove());
+      document.body.classList.remove('modal-open');
+      document.body.style.overflow = 'auto';
+    }, 300);
   }
 }
+
+
+
+
+
+
+

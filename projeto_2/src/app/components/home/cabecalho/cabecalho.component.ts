@@ -18,6 +18,9 @@ import * as bootstrap from 'bootstrap';
   styleUrls: ['./cabecalho.component.css']
 })
 export class CabecalhoComponent {
+removerBackdrop() {
+throw new Error('Method not implemented.');
+}
   isMagoOpen = false;
   isSobreOpen = false;
   isFavoritoOpen = false;
