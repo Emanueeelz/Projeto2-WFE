@@ -26,3 +26,14 @@
   color: #d1c4e9;
   text-decoration: underline;
 }
+
+.logo {
+  height: 100px;
+  transition: height 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    height: 30px;
+  }
+}
