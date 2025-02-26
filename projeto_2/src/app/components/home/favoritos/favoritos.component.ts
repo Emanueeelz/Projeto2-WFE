@@ -1,8 +1,7 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, ElementRef, Renderer2 } from '@angular/core';
 import { FavoritosService } from '../../../services/favoritos.service';
 import { CommonModule } from '@angular/common';
-import { RouterModule, Router, NavigationStart } from '@angular/router'; 
-import * as bootstrap from 'bootstrap';
+import { RouterModule, Router, NavigationStart } from '@angular/router';
 
 @Component({
   selector: 'app-favoritos',
@@ -16,7 +15,9 @@ export class FavoritosComponent implements OnInit {
 
   constructor(
     @Inject(FavoritosService) private favoritosService: FavoritosService,
-    private router: Router
+    private router: Router,
+    private elRef: ElementRef,
+    private renderer: Renderer2
   ) {}
 
   ngOnInit() {
@@ -25,10 +26,9 @@ export class FavoritosComponent implements OnInit {
       console.log("Jogos nos favoritos:", this.favoritos);
     });
 
-
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationStart) {
-        this.fecharModalBootstrap();
+        this.fecharModal();
       }
     });
   }
@@ -48,38 +48,34 @@ export class FavoritosComponent implements OnInit {
 
     const rota = rotas[jogo] || 'home';
 
-
-    this.fecharModalBootstrap();
-
-
+    this.fecharModal();
     this.router.navigate([rota]);
   }
 
-  private fecharModalBootstrap() {
-    const modalElement = document.getElementById('favoritosModal');
+  private fecharModal() {
+    const modalElement = this.elRef.nativeElement.querySelector('#favoritosModal');
 
     if (modalElement) {
-      const modalInstance = bootstrap.Modal.getInstance(modalElement);
-      if (modalInstance) {
-        modalInstance.hide();
-      }
+      this.renderer.setStyle(modalElement, 'display', 'none');
     }
 
-
     this.removerBackdrop();
-
-
     this.favoritosService.fecharModalFavoritos();
   }
 
-  removerBackdrop() {
+  private removerBackdrop() {
     setTimeout(() => {
       document.querySelectorAll('.modal-backdrop').forEach(backdrop => backdrop.remove());
-      document.body.classList.remove('modal-open');
-      document.body.style.overflow = 'auto';
+
+      if (document.body.classList.contains('modal-open')) {
+        document.body.classList.remove('modal-open');
+      }
+
+      document.body.removeAttribute('style'); // Remove qualquer estilo inline do body
     }, 300);
   }
 }
+
 
 
 
